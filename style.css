@@ -274,7 +274,7 @@ th {
 }
 
 .icon-wrapper {
-	border: 1px solid #444;
+	border: 1px solid #484653;
 	display: inline-block;
 	margin-right: 1em;
 	width: 2em;
@@ -368,7 +368,10 @@ h2 {
 	font-size: 24px;
 	font-size: 1.5rem;
 }
-h3 {
+h3,
+.comments-title,
+.comment-reply-title,
+.widget-title {
 	font-size: 19px;
 	font-size: 1.1875rem;
 }
@@ -405,7 +408,10 @@ h6 {
 		font-size: 30px;
 		font-size: 1.875rem;
 	}
-	h3 {
+	h3,
+	.comments-title,
+	.comment-reply-title
+	.widget-title {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
@@ -435,7 +441,7 @@ address {
 }
 
 pre {
-	background: #444;
+	background: #484653;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -465,7 +471,7 @@ acronym {
 mark,
 ins {
 	background-color: #fff9c0;
-	color: #444;
+	color: #484653;
 	text-decoration: none;
 }
 
@@ -500,10 +506,13 @@ q:after {
 }
 
 blockquote {
-	font-size: 1.125em;
+	background-color: #484653;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 1.25em;
 	font-style: italic;
 	quotes: "" "";
-	margin: 0 0 1.13333333333em 0;
+	margin: 0 0 1.36em 0;
 	text-align: center;
 }
 .singular blockquote {
@@ -515,7 +524,7 @@ q p:last-child {
 }
 
 hr {
-	background-color: #444;
+	background-color: #484653;
 	border: 0;
 	height: 2px;
 	margin-bottom: 1.7em;
@@ -558,7 +567,7 @@ img {
 table,
 th,
 td {
-	border: 1px solid #444;
+	border: 1px solid #484653;
 }
 
 table {
@@ -602,10 +611,10 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 a.button {
-	background-color: #fff;
+	background-color: #484653;
 	border: 0;
 	border-radius: 2px;
-	color: #32313b;
+	color: #fff;
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: 700;
@@ -658,13 +667,13 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	background-color: transparent;
-	border: 1px solid #444;
+	border: 1px solid #484653;
 	border-radius: 2px;
 	transition: all 0.25s ease-in-out;
 }
 
 select {
-	border: 1px solid #444;
+	border: 1px solid #484653;
 }
 
 input[type="text"]:focus,
@@ -725,7 +734,8 @@ a:visited {
 	transition: all 0.25s ease-in-out;
 	text-decoration: none;
 }
-.entry-content a {
+.entry-content a,
+.widget a {
 	border-bottom: 1px dotted #e6e2e2;
 }
 
@@ -765,7 +775,7 @@ a:active {
 }
 
 .main-navigation li {
-	border-bottom: 1px solid #444;
+	border-bottom: 1px solid #484653;
 	display: block;
 	padding-left: 5%;
 	padding-right: 5%;
@@ -831,7 +841,7 @@ a:active {
 	}
 
 	.main-navigation {
-		border-bottom: 1px solid #444;
+		border-bottom: 1px solid #484653;
 		padding-left: 5%;
 		padding-right: 5%;
 		padding-top: 0.84375em;
@@ -872,7 +882,7 @@ a:active {
 
 	.main-navigation ul ul {
 		background-color: #32313b;
-		border: 1px solid #444;
+		border: 1px solid #484653;
 		border-bottom: none;
 		display: block;
 		left: -999em;
@@ -892,7 +902,7 @@ a:active {
 
 	.main-navigation ul ul li,
 	.main-navigation .sub-menu li {
-		border-bottom: 1px solid #444;
+		border-bottom: 1px solid #484653;
 	}
 
 	.main-navigation ul ul a {
@@ -957,7 +967,7 @@ a:active {
 	padding-left: 0;
 }
 .menu-social a {
-	background-color: #444;
+	background-color: #484653;
 	border-radius: 50%;
 	display: block;
 	width: 4em;
@@ -994,22 +1004,23 @@ a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-	margin: 1.7em 0;
+	margin: 3.4em 0;
 	overflow: hidden;
 }
-.site-main .post-navigation,
-.site-main .comment-navigation {
-	border-top: 1px solid #444;
-    border-bottom: 1px solid #444;
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	border-top: 1px solid #484653;
+    border-bottom: 1px solid #484653;
     padding: 1.7em 0;
 }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	border-bottom: 1px solid #444;
-	padding-bottom: 1.7em;
-	margin-bottom: 1.7em;
+.comment-navigation .nav-previous + .nav-next,
+.posts-navigation  .nav-previous + .nav-next,
+.post-navigation .nav-previous + .nav-next {
+	border-top: 1px solid #484653;
+	padding-top: 1.7em;
+	margin-top: 1.7em;
 }
 
 @media screen and (min-width: 56em) {
@@ -1017,10 +1028,7 @@ a:active {
 	.comment-navigation .nav-previous,
 	.posts-navigation .nav-previous,
 	.post-navigation .nav-previous {
-		border-bottom: none;
 		float: left;
-		padding-bottom: 0;
-		margin-bottom: 0;
 		width: 50%;
 	}
 
@@ -1030,6 +1038,14 @@ a:active {
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+	
+	.comment-navigation .nav-previous + .nav-next,
+	.posts-navigation  .nav-previous + .nav-next,
+	.post-navigation .nav-previous + .nav-next {
+		border-top: none;
+		padding-top: 0;
+		margin-top: 0;
 	}
 	
 }
@@ -1136,11 +1152,29 @@ a:active {
 # Widgets
 --------------------------------------------------------------*/
 
+.footer-widgets-wrapper {
+	border-top: 1px solid #484653;
+	padding-top: 3.7em;
+}
+.footer-widgets-wrapper .widget-area {
+	padding-bottom: 1.7em;
+	text-align: center;
+}
+
 .widget {
 	margin: 0 0 1.7em;
 }
+.widget ul,
+.widget ol {
+	list-style: none;
+	margin-left: 0;
+}
+
 .widget-title {
-	font-size: 1.25em;
+	font-weight: 400;
+	letter-spacing: 4px;
+	line-height: 1.25;
+	text-transform: uppercase;
 }
 
 /* Make sure select elements fit in widgets. */
@@ -1156,7 +1190,7 @@ a:active {
 .primary-menu-wrapper,
 .site-branding > .wrapper,
 .content-area,
-.widget-area,
+.footer-widgets-wrapper > .wrapper,
 .entry-header,
 .entry-content,
 .entry-footer,
@@ -1171,19 +1205,21 @@ a:active {
 .entry-content,
 .entry-footer,
 .entry-summary,
-.comments-area {
+.comments-area,
+.footer-widgets-1 .footer-widgets-wrapper > .wrapper {
 	max-width: 37.777777777em;
 }
 
 .site-branding,
 .site-content,
-.site-footer {
+.site-footer,
+.footer-widgets-wrapper {
 	padding-left: 5%;
 	padding-right: 5%;
 }
 
 .site-branding {
-	border-bottom: 1px solid #444;
+	border-bottom: 1px solid #484653;
 	padding-top: 6%;
 	padding-bottom: 6%;
 	margin-bottom: 3em;
@@ -1212,8 +1248,8 @@ a:active {
 @media screen and (min-width: 56em) {
 	
 	.grid-wrapper > .hentry {
-		border-right: 1px solid #444;
-		border-bottom: 1px solid #444;
+		border-right: 1px solid #484653;
+		border-bottom: 1px solid #484653;
 		margin-bottom: 0;
 		width: 50%;
 	}
@@ -1238,19 +1274,52 @@ a:active {
 		width: 50%;
 	}
 	.site-title-description {
-		border-right: 1px solid #444;
+		border-right: 1px solid #484653;
 	}
 	.menu-social {
 		padding-top: 0;
 	}
 	
+	/* Widgets. */
+	.footer-widgets-wrapper {
+		padding-top: 0;
+	}
+	.footer-widgets-wrapper .widget-area {
+		padding-top: 3.4em;
+	}
+	
+	.footer-widgets-2 .widget-area {
+		width: 50%;
+	}
+	.footer-widgets-3 .widget-area {
+		width: 33.3333333333%;
+	}
+	.footer-widgets-2 .widget-area:first-child,
+	.footer-widgets-3 .widget-area:first-child {
+		padding-right: 1.7em;
+	}
+	.footer-widgets-3 .widget-area:nth-child(2) {
+		padding-left: 1.7em;
+		padding-right: 1.7em;
+	}
+	.footer-widgets-2 .widget-area:last-child,
+	.footer-widgets-3 .widget-area:last-child {
+		padding-left: 1.7em;
+	}
+	.footer-widgets-2 .widget-area:first-child,
+	.footer-widgets-3 .footer-area-1,
+	.footer-widgets-3 .footer-area-2 {
+		border-right: 1px solid #484653;
+	}
+	
 }
 	
 .site-footer {
-	border-top: 1px solid #444;
+	border-top: 1px solid #484653;
 	padding-top: 1.7em;
 	padding-bottom: 1.7em;
 }
+
 
 /*--------------------------------------------------------------
 # Content
@@ -1289,12 +1358,17 @@ a:active {
 }
 
 .entry-meta {
-	background-color: #444;
+	background-color: #484653;
 	border-radius: 2px;
 	font-size: 0.875em;
-	padding: 1em;
-	margin-bottom: 1.7em;
+	padding: 0.875em;
+	margin-bottom: 1.94285714286em;
 	text-align: center;
+}
+
+.tags-links,
+.edit-link {
+	display: block;
 }
 
 /*--------------------------------------------------------------
@@ -1317,7 +1391,6 @@ a:active {
 
 .comments-title,
 .comment-reply-title {
-	font-size: 26px;
 	font-weight: 400;
 	letter-spacing: 4px;
 	line-height: 1.25;
@@ -1421,7 +1494,6 @@ ol.comment-list ol.children {
 .logged-in-as,
 .form-allowed-tags,
 .no-comments {
-	color: #666;
 	font-style: italic;
 	margin-bottom: 1.75em;
 	text-align: center;
@@ -1470,7 +1542,8 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	font-style: italic;
+	margin: 0.75em 0;
 }
 
 .wp-caption-text {

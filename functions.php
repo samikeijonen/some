@@ -74,16 +74,22 @@ function some_setup() {
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside',
 		'image',
-		'video',
-		'quote',
 		'link',
+	) );
+	
+	// Add support for selective refresh widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+	
+	// Add support for logo.
+	add_theme_support( 'custom-logo', array(
+		'height'      => 180,
+		'width'       => 180,
 	) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'some_custom_background_args', array(
-		'default-color' => 'ffffff',
+		'default-color' => '32313b',
 		'default-image' => '',
 	) ) );
 	
@@ -104,7 +110,7 @@ add_action( 'after_setup_theme', 'some_setup' );
  * @global int $content_width
  */
 function some_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'some_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'some_content_width', 780 );
 }
 add_action( 'after_setup_theme', 'some_content_width', 0 );
 
@@ -147,15 +153,37 @@ function some_fonts_url() {
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function some_widgets_init() {
+	
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'some' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'some' ),
+		'name'          => esc_html__( 'Footer widget area 1', 'some' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add widgets here for footer widget area 1.', 'some' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer widget area 2', 'some' ),
+		'id'            => 'footer-2',
+		'description'   => esc_html__( 'Add widgets here for footer widget area 2.', 'some' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer widget area 3', 'some' ),
+		'id'            => 'footer-3',
+		'description'   => esc_html__( 'Add widgets here for footer widget area 3.', 'some' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
 }
 add_action( 'widgets_init', 'some_widgets_init' );
 

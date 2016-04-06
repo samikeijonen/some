@@ -1,0 +1,17 @@
+/* Import theme styles. */
+@import url( '../../style.css' );
+
+/* Styles specific to the editor. */
+
+body#tinymce {
+	background: #32313b;
+	border: none;
+	margin-top: 1.7em;
+	margin-left: 3%;
+	padding-right: 3%;
+	max-width: 680px;
+}
+
+body#tinymce a {
+    border-bottom: 1px dotted #e6e2e2;
+}

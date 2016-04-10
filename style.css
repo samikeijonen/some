@@ -289,6 +289,11 @@ th {
 	border-radius: 50%;
 }
 
+.error404 .icon-404 {
+	width: 14em;
+	height: 14em;
+}
+
 
 /*--------------------------------------------------------------
 # Typography
@@ -371,7 +376,8 @@ h2 {
 h3,
 .comments-title,
 .comment-reply-title,
-.widget-title {
+.widget-title,
+.widgettitle {
 	font-size: 19px;
 	font-size: 1.1875rem;
 }
@@ -411,7 +417,8 @@ h6 {
 	h3,
 	.comments-title,
 	.comment-reply-title
-	.widget-title {
+	.widget-title,
+	.widgettitle {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
@@ -665,15 +672,12 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
-	background-color: transparent;
+textarea,
+select {
+	background-color: #484653;
 	border: 1px solid #484653;
 	border-radius: 2px;
 	transition: all 0.25s ease-in-out;
-}
-
-select {
-	border: 1px solid #484653;
 }
 
 input[type="text"]:focus,
@@ -691,7 +695,8 @@ input[type="time"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
-textarea:focus {
+textarea:focus,
+select:focus  {
 	border-color: #e6e2e2;
 	outline: 0;
 }
@@ -711,7 +716,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea  {
+textarea,
+select  {
 	padding: 0.5em;
 	width: 100%;
 }
@@ -720,6 +726,47 @@ textarea  {
 	border-radius: 0;
 	width: 100%;
 }
+
+/* Search form. */
+.search-form {
+	position: relative;
+}
+
+.error-404 .search-field {
+	margin-bottom: 1.7em;
+}
+
+.search-form .search-field {
+	height: 52px;
+	padding: 1em;
+	margin-bottom: 2em;
+}
+
+.search-form .search-submit {
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	height: 52px;
+	width: 52px;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.search-form .search-submit:hover,
+.search-form .search-submit:focus,
+.search-form .search-submit:active {
+	background-color: #cf2020;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	color: #fff;
+}
+
+.icon-search {
+	height: 1.25em;
+	width: 1.25em;
+}
+
 
 /*--------------------------------------------------------------
 # Navigation
@@ -738,11 +785,31 @@ a:visited {
 .widget a {
 	border-bottom: 1px dotted #e6e2e2;
 }
+.widget_tag_cloud a,
+.widget_tag_cloud a:visited {
+	background-color: #484653;
+	border-bottom: none;
+	border-radius: 2px;
+	display: inline-block;
+	letter-spacing: 1px;
+	line-height: 32px;
+	padding: 0 8px !important;
+	margin: 0 2px 6px 0;
+	text-decoration: none;
+	text-transform: capitalize;	
+}
 
 a:hover,
 a:focus,
 a:active {
 	color: #e6e2e2;
+}
+
+.widget_tag_cloud a:hover,
+.widget_tag_cloud a:focus,
+.widget_tag_cloud a:active {
+	background-color: #e6e2e2;
+	color: #32313b;
 }
 
 a:focus {
@@ -1170,7 +1237,8 @@ a:active {
 	margin-left: 0;
 }
 
-.widget-title {
+.widget-title,
+.widgettitle {
 	font-weight: 400;
 	letter-spacing: 4px;
 	line-height: 1.25;
@@ -1247,26 +1315,37 @@ a:active {
 
 @media screen and (min-width: 56em) {
 	
-	.grid-wrapper > .hentry {
+	.grid-wrapper > .hentry,
+	.error404 .page-content > .grid-wrapper > * {
 		border-right: 1px solid #484653;
 		border-bottom: 1px solid #484653;
 		margin-bottom: 0;
 		width: 50%;
 	}
-	.grid-wrapper > .hentry:nth-child(2n) {
+	.grid-wrapper > .hentry:nth-child(2n),
+	.error404 .page-content > .grid-wrapper > *:nth-child(2n) {
 		border-right: none;
 	}
 	.menu-social,
-	.grid-wrapper > .hentry:nth-child(2n) > .entry-inner {
+	.grid-wrapper > .hentry:nth-child(2n) > .entry-inner,
+	.error404 .page-content > .grid-wrapper > *:nth-child(2n) {
 		padding-left: 1.7em;
 	}
 	.site-title-description,
-	.grid-wrapper > .hentry:nth-child(2n+1) .entry-inner {
+	.grid-wrapper > .hentry:nth-child(2n+1) .entry-inner,
+	.error404 .page-content > .grid-wrapper > *:nth-child(2n+1) {
 		padding-right: 1.7em;
 	}
-	.entry-inner {
+	.entry-inner,
+	.error404 .page-content > .grid-wrapper > * {
 		padding-top: 3.4em;
 		padding-bottom: 1.7em;
+	}
+	.error404 .page-content > .grid-wrapper > * {
+		padding-bottom: 3.4em;
+	}
+	.error404 .page-content {
+		margin-bottom: 3.4em;
 	}
 	
 	.site-title-description,
@@ -1383,6 +1462,10 @@ a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+
+.comments-area {
+	padding-bottom: 1.7em;
+}
 
 .comment-list + .comment-respond,
 .comment-navigation + .comment-respond {

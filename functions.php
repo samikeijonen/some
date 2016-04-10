@@ -188,6 +188,17 @@ function some_widgets_init() {
 add_action( 'widgets_init', 'some_widgets_init' );
 
 /**
+ * Handles JavaScript detection.
+ *
+ * Adds a `js` class to the root `<html>` element when JavaScript is detected.
+ *
+ */
+function some_javascript_detection() {
+	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+}
+add_action( 'wp_head', 'some_javascript_detection', 0 );
+
+/**
  * Enqueue scripts and styles.
  */
 function some_scripts() {
@@ -287,6 +298,20 @@ function some_nav_social_icons( $item_output, $item, $depth, $args ) {
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'some_nav_social_icons', 10, 4 );
+
+/**
+ * Modifies tag cloud widget arguments to have all tags in the widget same font size.
+ *
+ * @param  array $args Arguments for tag cloud widget.
+ * @return array A new modified arguments.
+ */
+function some_widget_tag_cloud_args( $args ) {
+	$args['largest']  = 0.875;
+	$args['smallest'] = 0.875;
+	$args['unit']     = 'em';
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'some_widget_tag_cloud_args' );
 
 /**
  * Implement the Custom Header feature.

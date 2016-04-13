@@ -21,7 +21,7 @@ get_header(); ?>
 					<div class="grid-wrapper">
 						
 						<div class="404-image">
-							<p><?php echo some_get_svg( array( 'icon' => '404' ) ); ?></p>
+							<p><?php echo some_get_svg( array( 'icon' => '404', 'aria_hidden' => false, 'title' => esc_html__( '404 image', 'some' ) ) ); ?></p>
 						</div>
 						<div class="404-search">
 							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'some' ); ?></p>

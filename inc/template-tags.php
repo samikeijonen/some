@@ -97,23 +97,38 @@ function some_get_svg( $args = array() ) {
 		return esc_html__( 'Please define default parameters in the form of an array.', 'some' );
 	}
 	
-	// YUNO define an icon?
+	// Define an icon.
 	if ( false === array_key_exists( 'icon', $args ) ) {
 		return esc_html__( 'Please define an SVG icon filename.', 'some' );
 	}
 	
 	// Set defaults.
 	$defaults = array(
-		'icon'  => '',
-		'title' => '',
-		'desc'  => ''
+		'icon'        => '',
+		'title'       => '',
+		'desc'        => '',
+		'aria_hidden' => true, // Hide from screen readers.
 	);
 	
 	// Parse args.
 	$args = wp_parse_args( $args, $defaults );
 	
+	// Set aria hidden.
+	if ( true === $args['aria_hidden'] ) {
+		$aria_hidden = ' aria-hidden="true"';
+	} else {
+		$aria_hidden = '';
+	}
+	
+	// Set ARIA.
+	if ( $args['title'] && $args['desc'] ) {
+		$aria_labelledby = ' aria-labelledby="title desc"';
+	} else {
+		$aria_labelledby = '';
+	}
+	
 	// Begin SVG markup
-	$svg = '<svg class="icon icon-' . esc_html( $args['icon'] ) . '">';
+	$svg = '<svg class="icon icon-' . esc_html( $args['icon'] ) . '"' . $aria_hidden . $aria_labelledby . ' role="img">';
 		// If there is a title, display it.
 		if ( $args['title'] ) {
 			$svg .= '	<title>' . esc_html( $args['title'] ) . '</title>';

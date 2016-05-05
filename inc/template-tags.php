@@ -7,7 +7,6 @@
  * @package Some
  */
 
-if ( ! function_exists( 'some_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
@@ -37,9 +36,7 @@ function some_posted_on() {
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 }
-endif;
 
-if ( ! function_exists( 'some_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
@@ -76,7 +73,6 @@ function some_entry_footer() {
 		'</span>'
 	);
 }
-endif;
 
 /**
  * Return SVG markup.

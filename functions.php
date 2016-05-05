@@ -16,7 +16,6 @@ if ( ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ) {
 	define( 'SOME_SUFFIX', '.min' );
 }
 
-if ( ! function_exists( 'some_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -83,15 +82,9 @@ function some_setup() {
 	
 	// Add support for logo.
 	add_theme_support( 'custom-logo', array(
-		'height'      => 180,
-		'width'       => 180,
+		'height' => 180,
+		'width'  => 180,
 	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'some_custom_background_args', array(
-		'default-color' => '32313b',
-		'default-image' => '',
-	) ) );
 	
 	/*
 	 * This theme styles the visual editor to resemble the theme style,
@@ -99,7 +92,6 @@ function some_setup() {
 	 */
 	add_editor_style( array( 'assets/css/editor-style.css', some_fonts_url() ) );
 }
-endif;
 add_action( 'after_setup_theme', 'some_setup' );
 
 /**
@@ -314,19 +306,62 @@ function some_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'some_widget_tag_cloud_args' );
 
 /**
+ * Add body classes.
+ *
+ * @param  array  $classes  body classes.
+ * @return array  $classes  body classes.
+ * @since  1.0.0
+ */
+function toivo_extra_layout_classes( $classes ) {
+	
+	// Add the '.custom-header-image' class if the user is using a custom header image.
+	if ( get_header_image() ) {
+		$classes[] = 'custom-header-image';
+	}
+	
+	// Adds a class of group-blog to blogs with more than 1 published author.
+	if ( is_multi_author() ) {
+		$classes[] = 'group-blog';
+	}
+
+	// Adds a class of hfeed to non-singular pages.
+	if ( ! is_singular() ) {
+		$classes[] = 'hfeed';
+	}
+	
+	// Footer widget area count.
+	$footer_widget_count = 0;
+	if( is_active_sidebar( 'footer-1' ) ) {
+		$footer_widget_count++;
+	}
+	if( is_active_sidebar( 'footer-2' ) ) {
+		$footer_widget_count++;
+	}
+	if( is_active_sidebar( 'footer-3' ) ) {
+		$footer_widget_count++;
+	}
+	
+	$classes[] = 'footer-widgets-' . $footer_widget_count;
+	
+    return $classes;
+	
+}
+add_filter( 'body_class', 'toivo_extra_layout_classes' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * Implement the Custom Background feature.
+ */
+require get_template_directory() . '/inc/custom-background.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.

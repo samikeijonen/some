@@ -30,9 +30,10 @@ get_header(); ?>
 					 * called content-search.php and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', 'search' );
+					
 				endwhile;
 			echo '</div><!-- .grid-wrapper -->';
-
+			
 			/* Translators: The %s is an arrow (SVG image). */
 			the_posts_navigation( array(
 				'prev_text' => sprintf( esc_html__( '%s Older writings', 'some' ), some_get_svg( $args = array( 'icon' => 'chevron-circle-left' ) ) ),

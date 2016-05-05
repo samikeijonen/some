@@ -17,13 +17,9 @@
 		
 			<?php
 				the_title( '<h1 class="entry-title">', '</h1>' );
-
-				if ( 'post' === get_post_type() ) : ?>
-				<div class="entry-meta">
-					<?php some_posted_on(); ?>
-				</div><!-- .entry-meta -->
-			<?php
-			endif; ?>
+				
+				get_template_part( 'entry-meta' );
+			?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
@@ -50,7 +46,11 @@
 		<div class="entry-inner">
 		
 			<header class="entry-header">
-				<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+				<?php
+					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				
+					get_template_part( 'entry-meta' );
+				?>
 			</header><!-- .entry-header -->
 		
 			<div class="entry-summary">

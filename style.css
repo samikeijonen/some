@@ -1,14 +1,14 @@
 /*
 Theme Name: Some
-Theme URI: http://underscores.me/
+Theme URI: https://foxland.fi/downloads/some/
 Author: Sami Keijonen
 Author URI: https://foxland.fi/
-Description: Social Proof
+Description: Some is simple blogging theme with SVG social menu.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: some
-Tags:
+Tags: one-column, fluid-layout, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, theme-options, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -23,31 +23,32 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Layout
-# Content
-	## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+1 Normalize
+2 Typography
+3 Elements
+4 Forms
+5 Navigation
+	5.1 Links
+	5.2 Menus
+6 Accessibility
+7 Alignments
+8 Clearings
+9 Widgets
+10 Layout
+11 Content
+	11.1 Posts and pages
+	11.2 Asides
+	11.3 Comments
+12 Media
+	12.1 SVG
+	12.2 Captions
+	12.3 Galleries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Normalize
+1 Normalize
 --------------------------------------------------------------*/
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -259,44 +260,9 @@ th {
 	padding: 0;
 }
 
-/*--------------------------------------------------------------
-# SVG
---------------------------------------------------------------*/
-
-.icon {
-	display: inline-block;
-	fill: currentColor;
-	height: 1em;
-	width: 1em;
-	vertical-align: middle;
-	position: relative; /* Align more nicely with capital letters */
-	top: -0.0625em;
-}
-
-.icon-wrapper {
-	border: 1px solid #484653;
-	display: inline-block;
-	margin-right: 1em;
-	width: 2em;
-	height: 2em;
-}
-
-.icon-wrapper > .icon {
-	left: 0.5em;
-}
-
-.icon-wrapper-round {
-	border-radius: 50%;
-}
-
-.error404 .icon-404 {
-	width: 14em;
-	height: 14em;
-}
-
 
 /*--------------------------------------------------------------
-# Typography
+2 Typography
 --------------------------------------------------------------*/
 
 body,
@@ -428,9 +394,6 @@ h6 {
 p {
 	margin: 0 0 1.7em;
 }
-.entry-content p:last-of-type {
-	margin-bottom: 0;
-}
 
 dfn,
 cite,
@@ -488,7 +451,7 @@ big {
 
 
 /*--------------------------------------------------------------
-# Elements
+3 Elements
 --------------------------------------------------------------*/
 
 html {
@@ -513,14 +476,13 @@ q:after {
 }
 
 blockquote {
-	background-color: #484653;
-	border-radius: 2px;
+	border-left: 4px solid #484653;
 	color: #fff;
 	font-size: 1.25em;
 	font-style: italic;
 	quotes: "" "";
+	padding-left: 1.25em;
 	margin: 0 0 1.36em 0;
-	text-align: center;
 }
 .singular blockquote {
 	padding: 2em 1.13333333333em;
@@ -610,7 +572,7 @@ td {
 
 
 /*--------------------------------------------------------------
-# Forms
+4 Forms
 --------------------------------------------------------------*/
 
 button,
@@ -657,6 +619,19 @@ input[type="submit"]:focus {
 	outline-offset: -2px;
 }
 
+.widget_mc4wp_form_widget input[type="submit"] {
+	background-color: #cf2020;
+	width: 100%;
+}
+.widget_mc4wp_form_widget input[type="submit"]:hover,
+.widget_mc4wp_form_widget input[type="submit"]:focus,
+.widget_mc4wp_form_widget input[type="submit"]:active {
+	background-color: #484653;
+}
+.widget_mc4wp_form_widget p {
+	margin-bottom: 0.85em;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -678,6 +653,9 @@ select {
 	border: 1px solid #484653;
 	border-radius: 2px;
 	transition: all 0.25s ease-in-out;
+}
+input[name="post_password"] {
+	margin-bottom: 1.7em;
 }
 
 input[type="text"]:focus,
@@ -741,6 +719,9 @@ select  {
 	padding: 1em;
 	margin-bottom: 2em;
 }
+.footer-widgets-wrapper .search-form .search-field {
+	margin-bottom: 0;
+}
 
 .search-form .search-submit {
 	background-color: transparent;
@@ -769,10 +750,10 @@ select  {
 
 
 /*--------------------------------------------------------------
-# Navigation
+5 Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## Links
+5.1 Links
 --------------------------------------------------------------*/
 
 a,
@@ -781,9 +762,17 @@ a:visited {
 	transition: all 0.25s ease-in-out;
 	text-decoration: none;
 }
+a.more-link {
+	font-size: 0.8125em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
 .entry-content a,
 .widget a {
 	border-bottom: 1px dotted #e6e2e2;
+}
+.entry-content .gallery-icon a {
+	border-bottom: none;
 }
 .widget_tag_cloud a,
 .widget_tag_cloud a:visited {
@@ -822,7 +811,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-## Menus
+5.2 Menus
 --------------------------------------------------------------*/
 
 .main-navigation {
@@ -897,6 +886,9 @@ a:active {
 .main-navigation.toggled ul {
 	display: block;
 }
+.main-navigation.toggled  {
+	background-color: #32313b;
+}
 
 @media screen and (min-width: 62.875em) {
 	
@@ -908,7 +900,7 @@ a:active {
 	}
 
 	.main-navigation {
-		border-bottom: 1px solid #484653;
+		background-color: #484653;
 		padding-left: 5%;
 		padding-right: 5%;
 		padding-top: 0.84375em;
@@ -954,7 +946,12 @@ a:active {
 		display: block;
 		left: -999em;
 		margin: 0;
+		opacity: 0;
 		position: absolute;
+		transition-property: opacity;
+		transition-duration: .25s;
+		transition-delay: 0.25s;
+		transition: opacity 0.3s ease-in-out;
 		z-index: 99999;
 	}
 
@@ -980,6 +977,7 @@ a:active {
 	.main-navigation li.focus > ul {
 		right: auto;
 		left: 0;
+		opacity: 1;
 	}
 
 	.main-navigation ul ul li:hover > ul,
@@ -1119,7 +1117,7 @@ a:active {
 
 
 /*--------------------------------------------------------------
-# Accessibility
+6 Accessibility
 --------------------------------------------------------------*/
 
 /* Text meant only for screen readers. */
@@ -1156,7 +1154,7 @@ a:active {
 
 
 /*--------------------------------------------------------------
-# Alignments
+7 Alignments
 --------------------------------------------------------------*/
 
 .alignleft {
@@ -1182,7 +1180,7 @@ a:active {
 
 
 /*--------------------------------------------------------------
-# Clearings
+8 Clearings
 --------------------------------------------------------------*/
 
 .clear:before,
@@ -1216,7 +1214,7 @@ a:active {
 
 
 /*--------------------------------------------------------------
-# Widgets
+9 Widgets
 --------------------------------------------------------------*/
 
 .footer-widgets-wrapper {
@@ -1224,12 +1222,11 @@ a:active {
 	padding-top: 3.7em;
 }
 .footer-widgets-wrapper .widget-area {
-	padding-bottom: 1.7em;
 	text-align: center;
 }
 
 .widget {
-	margin: 0 0 1.7em;
+	margin: 0 0 3.4em;
 }
 .widget ul,
 .widget ol {
@@ -1252,7 +1249,7 @@ a:active {
 
 
 /*--------------------------------------------------------------
-# Layout
+10 Layout
 --------------------------------------------------------------*/
 
 .primary-menu-wrapper,
@@ -1286,6 +1283,13 @@ a:active {
 	padding-right: 5%;
 }
 
+
+.custom-header-image .site-header {
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 1.7em;
+}
+
 .site-branding {
 	border-bottom: 1px solid #484653;
 	padding-top: 6%;
@@ -1299,6 +1303,15 @@ a:active {
 	-webkit-transform: skew(0deg, 3deg);
 	    -ms-transform: skew(0deg, 3deg);
 	        transform: skew(0deg, 3deg);
+}
+.custom-header-image  .site-branding {
+	border-bottom: none;
+}
+
+.custom-header-image .site-title-description {
+	background-color: rgba(50, 49, 59, 0.8);
+	border-right: none;
+	padding: 1em;
 }
 
 .grid-wrapper {
@@ -1395,16 +1408,20 @@ a:active {
 	
 .site-footer {
 	border-top: 1px solid #484653;
-	padding-top: 1.7em;
-	padding-bottom: 1.7em;
+	font-size: 0.8125em;
+	letter-spacing: 2px;
+	padding-top: 2.09230769231em;
+	padding-bottom: 2.09230769231em;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 
 /*--------------------------------------------------------------
-# Content
+11 Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## Posts and pages
+11.1 Posts and pages
 --------------------------------------------------------------*/
 
 .sticky {
@@ -1427,7 +1444,8 @@ a:active {
 
 .page-content,
 .entry-content,
-.entry-summary {
+.entry-summary,
+.entry-media {
 	margin-bottom: 1.7em;
 }
 
@@ -1437,12 +1455,10 @@ a:active {
 }
 
 .entry-meta {
-	background-color: #484653;
-	border-radius: 2px;
+	border-left: 4px solid #484653;
 	font-size: 0.875em;
-	padding: 0.875em;
+	padding: 0 0.875em;
 	margin-bottom: 1.94285714286em;
-	text-align: center;
 }
 
 .tags-links,
@@ -1451,7 +1467,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-## Asides
+11.2 Asides
 --------------------------------------------------------------*/
 
 .blog .format-aside .entry-title,
@@ -1460,8 +1476,11 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-## Comments
+11.3 Comments
 --------------------------------------------------------------*/
+
+.bypostauthor {
+}
 
 .comments-area {
 	padding-bottom: 1.7em;
@@ -1589,8 +1608,14 @@ ol.comment-list ol.children {
 
 
 /*--------------------------------------------------------------
-# Media
+12 Media
 --------------------------------------------------------------*/
+
+.custom-logo-link > img {
+	border-radius: 50%;
+	margin-bottom: 14px;
+	max-width: 90px;
+}
 
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -1608,9 +1633,43 @@ object {
 	max-width: 100%;
 }
 
+/*--------------------------------------------------------------
+12.1 SVG
+--------------------------------------------------------------*/
+
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	height: 1em;
+	width: 1em;
+	vertical-align: middle;
+	position: relative; /* Align more nicely with capital letters */
+	top: -0.0625em;
+}
+
+.icon-wrapper {
+	border: 1px solid #484653;
+	display: inline-block;
+	margin-right: 0.75em;
+	width: 2em;
+	height: 2em;
+}
+
+.icon-wrapper > .icon {
+	left: 0.5em;
+}
+
+.icon-wrapper-round {
+	border-radius: 50%;
+}
+
+.error404 .icon-404 {
+	width: 14em;
+	height: 14em;
+}
 
 /*--------------------------------------------------------------
-## Captions
+12.2 Captions
 --------------------------------------------------------------*/
 
 .wp-caption {
@@ -1634,8 +1693,9 @@ object {
 }
 
 /*--------------------------------------------------------------
-## Galleries
+#12.3 Galleries
 --------------------------------------------------------------*/
+
 .gallery {
 	margin-bottom: 1.5em;
 }
@@ -1681,4 +1741,5 @@ object {
 
 .gallery-caption {
 	display: block;
+	margin-bottom: 0.85em;
 }

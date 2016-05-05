@@ -44,6 +44,8 @@
 			<div class="wrapper grid-wrapper">
 
 				<div class="site-title-description">
+				
+					<?php some_the_custom_logo(); ?>
 
 					<?php
 					if ( is_front_page() && is_home() ) : ?>

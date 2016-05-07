@@ -37,11 +37,11 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: archive.php:42, home.php:47, index.php:45
+#: archive.php:42, home.php:47, index.php:45, search.php:39
 msgid "%s Older writings"
 msgstr ""
 
-#: archive.php:43, home.php:48, index.php:46
+#: archive.php:43, home.php:48, index.php:46, search.php:40
 msgid "Newer writings %s"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Add widgets here for footer widget area 3."
 msgstr ""
 
-#: functions.php:228
+#: functions.php:231
 msgid "Read more %s"
 msgstr ""
 
@@ -170,6 +170,10 @@ msgstr ""
 
 #: menus\menu-social.php:21, menus\menu-social.php:23
 msgid "Social Menu"
+msgstr ""
+
+#: search.php:19
+msgid "Search Results for: %s"
 msgstr ""
 
 #: searchform.php:11, searchform.php:12

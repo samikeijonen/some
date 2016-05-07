@@ -64,6 +64,14 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#: entry-footer.php:25
+msgid "Categories:"
+msgstr ""
+
+#: entry-footer.php:27
+msgid "Tags:"
+msgstr ""
+
 #: footer.php:20
 msgid "https://wordpress.org/"
 msgstr ""
@@ -130,42 +138,27 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: inc\template-tags.php:27
+#: inc\template-tags.php:28
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc\template-tags.php:32
+#: inc\template-tags.php:33
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc\template-tags.php:47, inc\template-tags.php:53
-msgid ", "
-msgstr ""
-
-#: inc\template-tags.php:49
-msgid "Posted in %1$s"
-msgstr ""
-
-#: inc\template-tags.php:55
-msgid "Tagged %1$s"
-msgstr ""
-
-#: inc\template-tags.php:62
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
-
-#: inc\template-tags.php:69
-msgid "Edit %s"
-msgstr ""
-
-#: inc\template-tags.php:93
+#: inc\template-tags.php:57
 msgid "Please define default parameters in the form of an array."
 msgstr ""
 
-#: inc\template-tags.php:98
+#: inc\template-tags.php:62
 msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: inc\template-tags.php:142
+msgctxt "taxonomy terms separator"
+msgid ", "
 msgstr ""
 
 #: menus\menu-social.php:21, menus\menu-social.php:23
@@ -225,10 +218,10 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts\content-page.php:23, template-parts\content.php:30
+#: template-parts\content-page.php:23, template-parts\content.php:28
 msgid "Pages:"
 msgstr ""
 
-#: template-parts\content-page.php:27, template-parts\content.php:34
+#: template-parts\content-page.php:27, template-parts\content.php:32
 msgid "Page"
 msgstr ""

@@ -1447,9 +1447,8 @@ a:active {
 	margin-bottom: 1.94285714286em;
 }
 
-.tags-links,
-.edit-link {
-	display: block;
+.entry-tags-wrapper {
+	margin-top: 1em;
 }
 
 /*--------------------------------------------------------------

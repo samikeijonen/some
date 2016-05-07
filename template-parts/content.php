@@ -14,11 +14,9 @@
 	<?php if ( is_singular() ) : // If single. ?>
 	
 		<header class="entry-header">
-		
 			<?php
 				the_title( '<h1 class="entry-title">', '</h1>' );
-				
-				get_template_part( 'entry-meta' );
+				get_template_part( 'entry', 'meta' ); // Loads the entry-meta.php file.
 			?>
 		</header><!-- .entry-header -->
 
@@ -36,10 +34,8 @@
 				) );
 			?>
 		</div><!-- .entry-content -->
-
-		<footer class="entry-footer">
-			<?php some_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
+		
+		<?php get_template_part( 'entry', 'footer' ); // Loads the entry-footer.php file. ?>
 	
 	<?php else : ?>
 		

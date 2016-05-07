@@ -11,6 +11,7 @@
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function some_posted_on() {
+	
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -35,43 +36,6 @@ function some_posted_on() {
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
-}
-
-/**
- * Prints HTML with meta information for the categories, tags and comments.
- */
-function some_entry_footer() {
-	// Hide category and tag text for pages.
-	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'some' ) );
-		if ( $categories_list && some_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'some' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
-
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'some' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'some' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-		}
-	}
-
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'some' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
-		echo '</span>';
-	}
-
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'some' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
 }
 
 /**
@@ -144,6 +108,63 @@ function some_get_svg( $args = array() ) {
  */
 function some_do_svg( $args = array() ) {
 	echo some_get_svg( $args );
+}
+
+/**
+ * This template tag is meant to replace template tags like `the_category()`, `the_terms()`, etc.  These core 
+ * WordPress template tags don't offer proper translation and RTL support without having to write a lot of 
+ * messy code within the theme's templates.  This is why theme developers often have to resort to custom 
+ * functions to handle this (even the default WordPress themes do this). Particularly, the core functions 
+ * don't allow for theme developers to add the terms as placeholders in the accompanying text (ex: "Posted in %s"). 
+ * This funcion is a wrapper for the WordPress `get_the_terms_list()` function.  It uses that to build a 
+ * better post terms list.
+ *
+ * @author  Justin Tadlock
+ * @link    https://github.com/justintadlock/hybrid-core/blob/2.0/functions/template-post.php
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * @since   1.0.0
+ * @param   array   $args
+ * @return  string
+ */
+function some_get_post_terms( $args = array() ) {
+
+	$html = '';
+
+	$defaults = array(
+		'post_id'    => get_the_ID(),
+		'taxonomy'   => 'category',
+		'text'       => '%s',
+		'before'     => '',
+		'after'      => '',
+		'items_wrap' => '<span %s>%s</span>',
+		/* Translators: Separates tags, categories, etc. when displaying a post. */
+		'sep'        => esc_html_x( ', ', 'taxonomy terms separator', 'some' )
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$terms = get_the_term_list( $args['post_id'], $args['taxonomy'], '', $args['sep'], '' );
+
+	if ( !empty( $terms ) ) {
+		$html .= $args['before'];
+		$html .= sprintf( $args['items_wrap'], 'class="entry-terms ' . $args['taxonomy'] . '"', sprintf( $args['text'], $terms ) );
+		$html .= $args['after'];
+	}
+
+	return $html;
+}
+
+/**
+ * Outputs a post's taxonomy terms.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array   $args
+ * @return void
+ */
+function some_post_terms( $args = array() ) {
+	echo some_get_post_terms( $args );
 }
 
 /**

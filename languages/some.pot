@@ -122,11 +122,11 @@ msgstr ""
 msgid "Read more %s"
 msgstr ""
 
-#: header.php:30
+#: header.php:25
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:37
+#: header.php:32
 msgid "Menu"
 msgstr ""
 

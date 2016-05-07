@@ -22,11 +22,6 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-<?php
-	// Include SVG images.
-	$svg_icons = get_template_directory() . '/assets/images/svg-icons.svg';
-	require_once( $svg_icons );
-?>
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'some' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">

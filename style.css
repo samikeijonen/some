@@ -299,17 +299,6 @@ h6,
 .entry-content h6 {
 	margin-top: 1em;
 }
-.singular .entry-title {
-	margin-bottom: 0;
-	text-align: center;
-}
-.singular .entry-title:after {
-	border-bottom: 2px solid #fff;
-	content: '';
-	display: block;
-	margin: 1em auto;
-	width: 60px;
-}
 
 .site-title {
 	letter-spacing: 2px;
@@ -483,9 +472,6 @@ blockquote {
 	quotes: "" "";
 	padding-left: 1.25em;
 	margin: 0 0 1.36em 0;
-}
-.singular blockquote {
-	padding: 2em 1.13333333333em;
 }
 blockquote p:last-child,
 q p:last-child {

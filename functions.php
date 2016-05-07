@@ -209,6 +209,9 @@ function some_scripts() {
 	// Add theme scripts.
 	wp_enqueue_script( 'some-navigation', get_template_directory_uri() . '/assets/js/navigation' . SOME_SUFFIX . '.js', array(), '20160405', true );
 	
+	// Add svgxuse polyfill.
+	wp_enqueue_script( 'some-svgxuse', get_template_directory_uri() . '/assets/js/svgxuse' . SOME_SUFFIX . '.js', array(), '20160405', true );
+	
 	// Add comments scripts.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -367,8 +370,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';

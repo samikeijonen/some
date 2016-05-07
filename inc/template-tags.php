@@ -133,7 +133,7 @@ function some_get_svg( $args = array() ) {
 		if ( $args['desc'] ) {
 			$svg .= '	<desc>' . esc_html( $args['desc'] ) . '</desc>';
 		}
-	$svg .= '	<use xlink:href="#icon-' . esc_html( $args['icon'] ) . '"></use>';
+	$svg .= '	<use xlink:href="' . get_template_directory_uri() . '/assets/images/svg-icons.svg'. '#icon-' . esc_html( $args['icon'] ) . '"></use>';
 	$svg .= '</svg>';
 	return $svg;
 }
@@ -143,7 +143,7 @@ function some_get_svg( $args = array() ) {
  * @param  array  $args  Parameters needed to display an SVG.
  */
 function some_do_svg( $args = array() ) {
-  echo some_get_svg( $args );
+	echo some_get_svg( $args );
 }
 
 /**

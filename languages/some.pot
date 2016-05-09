@@ -134,10 +134,6 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:32
-msgid "Menu"
-msgstr ""
-
 #: inc\template-tags.php:28
 msgctxt "post date"
 msgid "Posted on %s"
@@ -161,7 +157,15 @@ msgctxt "taxonomy terms separator"
 msgid ", "
 msgstr ""
 
-#: menus\menu-social.php:21, menus\menu-social.php:23
+#: menus\menu-primary.php:21
+msgid "Primary Menu"
+msgstr ""
+
+#: menus\menu-primary.php:23
+msgid "Menu"
+msgstr ""
+
+#: menus\menu-social.php:21
 msgid "Social Menu"
 msgstr ""
 

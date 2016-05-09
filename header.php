@@ -25,15 +25,8 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'some' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-
-		<?php if ( has_nav_menu( 'primary' ) ) : // Check do we have primary menu. ?>
-
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'some' ); ?></button>
-				<?php wp_nav_menu( array( 'container_class' => 'primary-menu-wrapper', 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'primary-menu' ) ); ?>
-			</nav><!-- #site-navigation -->
-
-		<?php endif; // End check for primary menu. ?>
+	
+		<?php get_template_part( 'menus/menu', 'primary' ); // Loads the menus/menu-primary.php template. ?>
 
 		<div class="site-branding">
 			<div class="wrapper grid-wrapper">

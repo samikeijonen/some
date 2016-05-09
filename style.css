@@ -863,10 +863,6 @@ a:active {
 	margin-right: 3em;
 }
 
-.main-navigation .menu-item-has-children > a > .icon-downarrow {
-	display: none;
-}
-
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -976,25 +972,8 @@ a:active {
 		margin: 0;
 	}
 
-	.main-navigation .menu-item-has-children > a > .icon-downarrow {
-		display: inline-block;
-		width: 0.5em;
-		height: 0.5em;
-		margin: 0.25em 0 0 0.25em;
-	}
-
 	.main-navigation ul ul .menu-item-has-children > a {
 		padding-right: 2.0625em;
-	}
-
-	.main-navigation ul ul .menu-item-has-children > a > .icon-downarrow {
-		position: absolute;
-		right: 1em;
-		top: 1em;
-		margin: 0;
-		-webkit-transform: rotate(-90deg);
-		-ms-transform: rotate(-90deg);
-		transform: rotate(-90deg);
 	}
 	
 }
@@ -1031,7 +1010,7 @@ a:active {
 	color: #cf2020;
 }
 .menu-social .icon {
-    width: 2em;
+	width: 2em;
 	height: 2em;
 	top: 1em;
 	left: 1em

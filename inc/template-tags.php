@@ -91,13 +91,13 @@ function some_get_svg( $args = array() ) {
 	$svg = '<svg class="icon icon-' . esc_html( $args['icon'] ) . '"' . $aria_hidden . $aria_labelledby . ' role="img">';
 		// If there is a title, display it.
 		if ( $args['title'] ) {
-			$svg .= '	<title>' . esc_html( $args['title'] ) . '</title>';
+			$svg .= '<title>' . esc_html( $args['title'] ) . '</title>';
 		}
 		// If there is a description, display it.
 		if ( $args['desc'] ) {
-			$svg .= '	<desc>' . esc_html( $args['desc'] ) . '</desc>';
+			$svg .= '<desc>' . esc_html( $args['desc'] ) . '</desc>';
 		}
-	$svg .= '	<use xlink:href="' . get_template_directory_uri() . '/assets/images/svg-icons.svg'. '#icon-' . esc_html( $args['icon'] ) . '"></use>';
+	$svg .= '<use xlink:href="' . get_template_directory_uri() . '/assets/images/svg-icons.svg'. '#icon-' . esc_html( $args['icon'] ) . '"></use>';
 	$svg .= '</svg>';
 	return $svg;
 }

@@ -11,6 +11,7 @@ The following resources are not included with the theme but are external resourc
 
 The following resources are included within the theme package.
 
+* [svgxuse](https://github.com/Keyamoon/svgxuse) by Icomoon - Licensed under the [MIT License](http://opensource.org/licenses/MIT).
 * [Genericons](http://genericons.com/) by Automattic - Licensed under the [GPL, version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
 * [Fontawesome](https://fortawesome.github.io/Font-Awesome/) by Dave Gandy - Licensed under the [MIT License](http://opensource.org/licenses/MIT).
 

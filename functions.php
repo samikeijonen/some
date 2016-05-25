@@ -49,6 +49,7 @@ function some_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 920, 575, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -66,15 +67,6 @@ function some_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
-	) );
-
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array(
-		'image',
-		'link',
 	) );
 	
 	// Add support for selective refresh widgets.
@@ -229,7 +221,7 @@ function some_excerpt_more() {
 
 	/* Translators: The %s is the post title shown to screen readers. */
 	$text = sprintf( esc_attr__( 'Read more %s', 'some' ), '<span class="screen-reader-text">' . get_the_title() ) . '</span>';
-	$more = sprintf( '&hellip; <p><a href="%s" class="more-link">%s %s</a></p>', esc_url( get_permalink() ), '<span class="icon-wrapper icon-wrapper-round">' . some_get_svg( array( 'icon' => 'next' ) ) . '</span>', $text );
+	$more = sprintf( '&hellip; <p><span class="icon-wrapper icon-wrapper-round">' . some_get_svg( array( 'icon' => 'next' ) ) . '</span><a href="%s" class="more-link">%s</a></p>', esc_url( get_permalink() ), $text );
 
 	return $more;
 

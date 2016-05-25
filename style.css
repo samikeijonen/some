@@ -4,11 +4,11 @@ Theme URI: https://foxland.fi/downloads/some/
 Author: Sami Keijonen
 Author URI: https://foxland.fi/
 Description: Some is simple blogging theme with SVG social menu.
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: some
-Tags: one-column, fluid-layout, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, theme-options, translation-ready
+Tags: one-column, grid-layout, footer-widgets, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, translation-ready, blog, portfolio
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -350,6 +350,10 @@ h6 {
 	text-transform: uppercase;
 }
 
+.front-page-content .entry-content {
+	font-size: 1.25em;
+}
+
 @media screen and (min-width: 62.875em) {
 	
 	body,
@@ -378,9 +382,14 @@ h6 {
 		font-size: 1.5rem;
 	}
 	
+	.front-page-content .entry-content {
+		font-size: 1.5em;
+	}
+	
 }
 
-p {
+p,
+.mejs-container {
 	margin: 0 0 1.7em;
 }
 
@@ -565,7 +574,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-a.button {
+a.button,
+.project-link {
 	background-color: #484653;
 	border: 0;
 	border-radius: 2px;
@@ -584,38 +594,53 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
+.project-link:hover,
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
 a.button:focus,
+.project-link:focus,
 button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active,
-a.button:active {
+a.button:active,
+.project-link:active {
 	background-color: #cf2020;
 	color: #fff;
 }
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
-input[type="submit"]:focus {
+input[type="submit"]:focus,
+.project-link:focus {
 	outline: 1px dotted;
 	outline-offset: -2px;
 }
 
-.widget_mc4wp_form_widget input[type="submit"] {
+.widget_mc4wp_form_widget input[type="submit"],
+.project-link {
 	background-color: #cf2020;
+}
+.widget_mc4wp_form_widget input[type="submit"] {
 	width: 100%;
 }
 .widget_mc4wp_form_widget input[type="submit"]:hover,
 .widget_mc4wp_form_widget input[type="submit"]:focus,
-.widget_mc4wp_form_widget input[type="submit"]:active {
+.widget_mc4wp_form_widget input[type="submit"]:active,
+.project-link:hover,
+.project-link:focus,
+.project-link:active {
 	background-color: #484653;
 }
-.widget_mc4wp_form_widget p {
+.widget_mc4wp_form_widget {
 	margin-bottom: 0.85em;
+}
+.entry-content .project-link {
+	border-bottom: none;
+	display: inline-block;
+	margin-bottom: 1.5em;
 }
 
 input[type="text"],
@@ -754,10 +779,12 @@ a.more-link {
 	text-transform: uppercase;
 }
 .entry-content a,
-.widget a {
+.widget a,
+.taxonomy-description a {
 	border-bottom: 1px dotted #e6e2e2;
 }
-.entry-content .gallery-icon a {
+.entry-content .gallery-icon a,
+.entry-content .mejs-horizontal-volume-slider {
 	border-bottom: none;
 }
 .widget_tag_cloud a,
@@ -778,6 +805,17 @@ a:hover,
 a:focus,
 a:active {
 	color: #e6e2e2;
+}
+.site-content a:hover,
+.footer-widgets-wrapper a:hover,
+.site-footer a:hover,
+.site-content a:focus,
+.footer-widgets-wrapper a:focus,
+.site-footer a:focus,
+.site-content a:active,
+.footer-widgets-wrapper a:active,
+.site-footer a:active {
+	background-color: #484653;
 }
 
 .widget_tag_cloud a:hover,
@@ -1236,8 +1274,14 @@ a:active {
 .entry-footer,
 .entry-summary,
 .comments-area,
+.page-header,
 .footer-widgets-1 .footer-widgets-wrapper > .wrapper {
 	max-width: 37.777777777em;
+}
+.page-header {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 .site-branding,
@@ -1396,6 +1440,27 @@ a:active {
 .hentry {
 	margin: 0 0 1.7em;
 }
+.front-page-content .hentry {
+	margin-bottom: 0;
+	text-align: center;
+}
+.front-page-content .entry-content p:last-of-type {
+	margin-bottom: 0;
+}
+
+.front-page-content:after {
+	background-color: #484653;
+	content: "";
+	display: block;
+	margin: 3em auto;
+	width: 50px;
+	height: 4px;
+}
+.front-page-portfolio,
+.front-page-blog {
+	padding-bottom: 1.5em;
+	margin-bottom: 1.5em;
+}
 
 .byline,
 .updated:not(.published) {
@@ -1428,6 +1493,11 @@ a:active {
 
 .entry-tags-wrapper {
 	margin-top: 0.85em;
+}
+
+.taxonomy-description {
+	font-style: italic;
+	padding-bottom: 3.4em;
 }
 
 /*--------------------------------------------------------------
@@ -1579,6 +1649,21 @@ ol.comment-list ol.children {
 	border-radius: 50%;
 	margin-bottom: 14px;
 	max-width: 90px;
+}
+
+a.post-thumbnail {
+	display: block;
+	opacity: 1;
+	transition: all 0.25s easy-in-out;
+}
+a.post-thumbnail:hover,
+a.post-thumbnail:focus,
+a.post-thumbnail:active {
+	opacity: 0.8;
+}
+.post-thumbnail > img {
+	display: block;
+	margin: 0 auto 1.25em;
 }
 
 .page-content .wp-smiley,

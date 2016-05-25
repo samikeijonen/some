@@ -182,6 +182,41 @@ function some_the_custom_logo() {
 }
 
 /**
+ * Displays an optional post thumbnail.
+ *
+ * Wraps the post thumbnail in an anchor element on index views, or a div
+ * element when on single views.
+ *
+ * @since Some 1.0.1
+ */
+function some_post_thumbnail( $post_thumbnail = null ) {
+	
+	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		return;
+	}
+	
+	// Set default size.
+	if ( null === $post_thumbnail ) {
+		$post_thumbnail = 'post-thumbnail';
+	}
+
+	if ( is_singular() ) :
+	?>
+
+		<div class="post-thumbnail">
+			<?php the_post_thumbnail( esc_attr( $post_thumbnail ) ); ?>
+		</div><!-- .post-thumbnail -->
+
+	<?php else : ?>
+
+		<a class="post-thumbnail" href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail( esc_attr( $post_thumbnail ), array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+		</a>
+
+	<?php endif; // End is_singular()
+}
+
+/**
  * Returns true if a blog has more than 1 category.
  *
  * @return bool

@@ -32,7 +32,7 @@ get_header(); ?>
 				'no_found_rows'  => true,
 			) ) );
 			
-			if ( $portfolio_content->have_posts() ) : ?>
+			if ( $portfolio_content->have_posts() && post_type_exists( 'portfolio_project' ) ) : ?>
 			
 			<div class="front-page-portfolio front-page-section" id="front-page-portfolio">
 				

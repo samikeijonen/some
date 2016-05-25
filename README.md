@@ -23,6 +23,11 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.1 - May 25, 2016
+
+* Add support for [Custom Content Portfolio](https://wordpress.org/plugins/custom-content-portfolio/) Plugin.
+* Add Front Page Template.
+
 ### Version 1.0.0 - May 5, 2016
 
 * Everything's new!

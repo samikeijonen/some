@@ -307,7 +307,7 @@ add_filter( 'widget_tag_cloud_args', 'some_widget_tag_cloud_args' );
  * @return array  $classes  body classes.
  * @since  1.0.0
  */
-function toivo_extra_layout_classes( $classes ) {
+function some_extra_layout_classes( $classes ) {
 	
 	// Add the '.custom-header-image' class if the user is using a custom header image.
 	if ( get_header_image() ) {
@@ -341,7 +341,7 @@ function toivo_extra_layout_classes( $classes ) {
     return $classes;
 	
 }
-add_filter( 'body_class', 'toivo_extra_layout_classes' );
+add_filter( 'body_class', 'some_extra_layout_classes' );
 
 /**
  * Implement the Custom Header feature.

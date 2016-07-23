@@ -23,6 +23,11 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.2 - July 23, 2016
+
+* Update language files.
+* Change wrong functions prefix to 'some_'.
+
 ### Version 1.0.1 - May 25, 2016
 
 * Add support for [Custom Content Portfolio](https://wordpress.org/plugins/custom-content-portfolio/) Plugin.

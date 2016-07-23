@@ -17,217 +17,121 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
 
-#: 404.php:17, build\some\404.php:17
+#: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:24, build\some\404.php:24
+#: 404.php:24
 msgid "404 image"
 msgstr ""
 
-#: 404.php:27, build\some\404.php:27
+#: 404.php:27
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: 404.php:39, build\some\404.php:39
+#: 404.php:39
 msgid "Most Used Categories"
 msgstr ""
 
-#: 404.php:57, build\some\404.php:57
+#: 404.php:57
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: archive.php:42, build\some\archive.php:42, build\some\home.php:47, build\some\index.php:45, build\some\search.php:39, home.php:47, index.php:45, search.php:39
+#: archive.php:42, home.php:47, index.php:45, search.php:39
 msgid "%s Older writings"
 msgstr ""
 
-#: archive.php:43, build\some\archive.php:43, build\some\home.php:48, build\some\index.php:46, build\some\search.php:40, home.php:48, index.php:46, search.php:40
+#: archive.php:43, home.php:48, index.php:46, search.php:40
 msgid "Newer writings %s"
 msgstr ""
 
-#: build\some\comments.php:31, comments.php:31
+#: comments.php:31
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: build\some\comments.php:49, comments.php:49
+#: comments.php:49
 msgid "%s Older comments"
 msgstr ""
 
-#: build\some\comments.php:50, comments.php:50
+#: comments.php:50
 msgid "Newer comments %s"
 msgstr ""
 
-#: build\some\comments.php:59, comments.php:59
+#: comments.php:59
 msgid "Comments are closed."
 msgstr ""
 
-#: build\some\entry-footer.php:25, build\some\template-parts\content-portfolio_project.php:42, entry-footer.php:25, template-parts\content-portfolio_project.php:41
+#: entry-footer.php:25, template-parts\content-portfolio_project.php:41
 msgid "Categories:"
 msgstr ""
 
-#: build\some\entry-footer.php:27, build\some\template-parts\content-portfolio_project.php:43, entry-footer.php:27, template-parts\content-portfolio_project.php:42
+#: entry-footer.php:27, template-parts\content-portfolio_project.php:42
 msgid "Tags:"
 msgstr ""
 
-#: build\some\footer.php:20, footer.php:20
+#: footer.php:20
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: build\some\footer.php:20, footer.php:20
+#: footer.php:20
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: build\some\footer.php:22, footer.php:22
+#: footer.php:22
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: build\some\functions.php:56, functions.php:56
+#: functions.php:56
 msgid "Primary"
 msgstr ""
 
-#: build\some\functions.php:57, functions.php:57
+#: functions.php:57
 msgid "Social Links"
 msgstr ""
 
-#: build\some\functions.php:115, functions.php:115
+#: functions.php:115
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr ""
 
-#: build\some\functions.php:120, functions.php:120
+#: functions.php:120
 msgctxt "Oxygen font: on or off"
 msgid "on"
 msgstr ""
 
-#: build\some\functions.php:142, functions.php:142
+#: functions.php:142
 msgid "Footer widget area 1"
 msgstr ""
 
-#: build\some\functions.php:144, functions.php:144
+#: functions.php:144
 msgid "Add widgets here for footer widget area 1."
 msgstr ""
 
-#: build\some\functions.php:152, functions.php:152
+#: functions.php:152
 msgid "Footer widget area 2"
 msgstr ""
 
-#: build\some\functions.php:154, functions.php:154
+#: functions.php:154
 msgid "Add widgets here for footer widget area 2."
 msgstr ""
 
-#: build\some\functions.php:162, functions.php:162
+#: functions.php:162
 msgid "Footer widget area 3"
 msgstr ""
 
-#: build\some\functions.php:164, functions.php:164
+#: functions.php:164
 msgid "Add widgets here for footer widget area 3."
 msgstr ""
 
-#: build\some\functions.php:223, functions.php:223
+#: functions.php:223
 msgid "Read more %s"
 msgstr ""
 
-#: build\some\header.php:25, header.php:25
+#: header.php:25
 msgid "Skip to content"
-msgstr ""
-
-#: build\some\inc\template-tags.php:28, inc\template-tags.php:28
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr ""
-
-#: build\some\inc\template-tags.php:33, inc\template-tags.php:33
-msgctxt "post author"
-msgid "by %s"
-msgstr ""
-
-#: build\some\inc\template-tags.php:57, inc\template-tags.php:57
-msgid "Please define default parameters in the form of an array."
-msgstr ""
-
-#: build\some\inc\template-tags.php:62, inc\template-tags.php:62
-msgid "Please define an SVG icon filename."
-msgstr ""
-
-#: build\some\inc\template-tags.php:142, inc\template-tags.php:142
-msgctxt "taxonomy terms separator"
-msgid ", "
-msgstr ""
-
-#: build\some\menus\menu-primary.php:21, menus\menu-primary.php:21
-msgid "Primary Menu"
-msgstr ""
-
-#: build\some\menus\menu-primary.php:23, menus\menu-primary.php:23
-msgid "Menu"
-msgstr ""
-
-#: build\some\menus\menu-social.php:21, menus\menu-social.php:21
-msgid "Social Menu"
-msgstr ""
-
-#: build\some\search.php:19, search.php:19
-msgid "Search Results for: %s"
-msgstr ""
-
-#: build\some\searchform.php:11, build\some\searchform.php:12, searchform.php:11, searchform.php:12
-msgctxt "label"
-msgid "Search for:"
-msgstr ""
-
-#: build\some\searchform.php:12, searchform.php:12
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr ""
-
-#: build\some\searchform.php:14, searchform.php:14
-msgctxt "submit button"
-msgid "Search"
-msgstr ""
-
-#: build\some\single.php:22, single.php:22
-msgid "Next post:"
-msgstr ""
-
-#: build\some\single.php:23, single.php:23
-msgctxt "dots after next post link"
-msgid "&hellip;"
-msgstr ""
-
-#: build\some\single.php:26, single.php:26
-msgid "Previous post:"
-msgstr ""
-
-#: build\some\single.php:27, single.php:27
-msgctxt "dots after previous post link"
-msgid "&hellip;"
-msgstr ""
-
-#: build\some\template-parts\content-none.php:14, template-parts\content-none.php:14
-msgid "Nothing Found"
-msgstr ""
-
-#: build\some\template-parts\content-none.php:21, template-parts\content-none.php:21
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: build\some\template-parts\content-none.php:25, template-parts\content-none.php:25
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr ""
-
-#: build\some\template-parts\content-none.php:31, template-parts\content-none.php:31
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr ""
-
-#: build\some\template-parts\content-page.php:23, build\some\template-parts\content-portfolio_project.php:30, build\some\template-parts\content.php:28, template-parts\content-page.php:23, template-parts\content-portfolio_project.php:29, template-parts\content.php:28
-msgid "Pages:"
-msgstr ""
-
-#: build\some\template-parts\content-page.php:27, build\some\template-parts\content-portfolio_project.php:34, build\some\template-parts\content.php:32, template-parts\content-page.php:27, template-parts\content-portfolio_project.php:33, template-parts\content.php:32
-msgid "Page"
 msgstr ""
 
 #: inc\customizer.php:19
@@ -250,6 +154,102 @@ msgstr ""
 msgid "Blog text"
 msgstr ""
 
+#: inc\template-tags.php:28
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc\template-tags.php:33
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc\template-tags.php:57
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: inc\template-tags.php:62
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: inc\template-tags.php:142
+msgctxt "taxonomy terms separator"
+msgid ", "
+msgstr ""
+
+#: menus\menu-primary.php:21
+msgid "Primary Menu"
+msgstr ""
+
+#: menus\menu-primary.php:23
+msgid "Menu"
+msgstr ""
+
+#: menus\menu-social.php:21
+msgid "Social Menu"
+msgstr ""
+
 #: pages\front-page.php:102
 msgid "Read blog posts"
+msgstr ""
+
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:11, searchform.php:12
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:12
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:14
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: single.php:22
+msgid "Next post:"
+msgstr ""
+
+#: single.php:23
+msgctxt "dots after next post link"
+msgid "&hellip;"
+msgstr ""
+
+#: single.php:26
+msgid "Previous post:"
+msgstr ""
+
+#: single.php:27
+msgctxt "dots after previous post link"
+msgid "&hellip;"
+msgstr ""
+
+#: template-parts\content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts\content-none.php:21
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts\content-none.php:25
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts\content-none.php:31
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts\content-page.php:23, template-parts\content-portfolio_project.php:29, template-parts\content.php:28
+msgid "Pages:"
+msgstr ""
+
+#: template-parts\content-page.php:27, template-parts\content-portfolio_project.php:33, template-parts\content.php:32
+msgid "Page"
 msgstr ""

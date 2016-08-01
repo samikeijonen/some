@@ -4,7 +4,7 @@ Theme URI: https://foxland.fi/downloads/some/
 Author: Sami Keijonen
 Author URI: https://foxland.fi/
 Description: Some is simple blogging theme with SVG social menu.
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: some
@@ -594,6 +594,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
+a.button:hover,
 .project-link:hover,
 button:focus,
 input[type="button"]:focus,
@@ -620,6 +621,7 @@ input[type="submit"]:focus,
 }
 
 .widget_mc4wp_form_widget input[type="submit"],
+a.button,
 .project-link {
 	background-color: #cf2020;
 }
@@ -629,6 +631,9 @@ input[type="submit"]:focus,
 .widget_mc4wp_form_widget input[type="submit"]:hover,
 .widget_mc4wp_form_widget input[type="submit"]:focus,
 .widget_mc4wp_form_widget input[type="submit"]:active,
+a.button:hover,
+a.button:focus,
+a.button:active,
 .project-link:hover,
 .project-link:focus,
 .project-link:active {
@@ -637,9 +642,12 @@ input[type="submit"]:focus,
 .widget_mc4wp_form_widget {
 	margin-bottom: 0.85em;
 }
+.entry-content a.button,
 .entry-content .project-link {
 	border-bottom: none;
 	display: inline-block;
+}
+.entry-content .project-link {
 	margin-bottom: 1.5em;
 }
 

@@ -23,6 +23,13 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.3 - August 1, 2016
+
+* Fix style issues in `button` class. Use that class in a link for callout buttons.
+* Fix footer sidebar visibility issue.
+
+* Update language files.
+
 ### Version 1.0.2 - July 23, 2016
 
 * Update language files.

@@ -23,6 +23,10 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.4 - September 5, 2016
+
+* Remove html5 support for search form because we use custom searchform.php template file.
+
 ### Version 1.0.3 - August 1, 2016
 
 * Fix style issues in `button` class. Use that class in a link for callout buttons.

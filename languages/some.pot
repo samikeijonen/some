@@ -92,41 +92,41 @@ msgstr ""
 msgid "Social Links"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:114
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:119
 msgctxt "Oxygen font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:141
 msgid "Footer widget area 1"
 msgstr ""
 
-#: functions.php:144
+#: functions.php:143
 msgid "Add widgets here for footer widget area 1."
 msgstr ""
 
-#: functions.php:152
+#: functions.php:151
 msgid "Footer widget area 2"
 msgstr ""
 
-#: functions.php:154
+#: functions.php:153
 msgid "Add widgets here for footer widget area 2."
 msgstr ""
 
-#: functions.php:162
+#: functions.php:161
 msgid "Footer widget area 3"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:163
 msgid "Add widgets here for footer widget area 3."
 msgstr ""
 
-#: functions.php:223
+#: functions.php:222
 msgid "Read more %s"
 msgstr ""
 

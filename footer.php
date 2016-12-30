@@ -19,7 +19,7 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'some' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'some' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'some' ), 'some', '<a href="https://foxland.fi/" rel="designer">Sami Keijonen</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'some' ), 'some', '<a href="https://foxland.fi/">Sami Keijonen</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

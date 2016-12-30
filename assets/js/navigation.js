@@ -5,12 +5,10 @@
  *
  * Learn more: https://git.io/vWdr2
  */
-( function() {
-	var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
-	    isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
-	    isIe     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
+(function() {
+	var isIe = /(trident|msie)/i.test( navigator.userAgent );
 
-	if ( ( isWebkit || isOpera || isIe ) && document.getElementById && window.addEventListener ) {
+	if ( isIe && document.getElementById && window.addEventListener ) {
 		window.addEventListener( 'hashchange', function() {
 			var id = location.hash.substring( 1 ),
 				element;
@@ -39,7 +37,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, subMenus, i, len;
+	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -78,12 +76,6 @@
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );
-	subMenus = menu.getElementsByTagName( 'ul' );
-
-	// Set menu items with submenus to aria-haspopup="true".
-	for ( i = 0, len = subMenus.length; i < len; i++ ) {
-		subMenus[i].parentNode.setAttribute( 'aria-haspopup', 'true' );
-	}
 
 	// Each time a menu link is focused or blurred, toggle focus.
 	for ( i = 0, len = links.length; i < len; i++ ) {

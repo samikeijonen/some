@@ -23,6 +23,17 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.1.0 - December 31, 2016
+
+* Add selective refresh for blog name and description.
+* Get correct version number to parent and child theme automatically.
+* Fix skip to content script.
+* Remove rel="designer" from the footer.
+* Remove aria-haspopup from submenus. It's not needed for accessiblity.
+* Update screen-reader-text class by adding word-wrap: normal.
+* Update SVG icon markup.
+* Update instagram icon.
+
 ### Version 1.0.4 - September 5, 2016
 
 * Remove html5 support for search form because we use custom searchform.php template file.

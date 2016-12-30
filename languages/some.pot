@@ -126,7 +126,7 @@ msgstr ""
 msgid "Add widgets here for footer widget area 3."
 msgstr ""
 
-#: functions.php:222
+#: functions.php:239
 msgid "Read more %s"
 msgstr ""
 
@@ -154,6 +154,14 @@ msgstr ""
 msgid "Blog text"
 msgstr ""
 
+#: inc\icon-functions.php:23
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: inc\icon-functions.php:28
+msgid "Please define an SVG icon filename."
+msgstr ""
+
 #: inc\template-tags.php:28
 msgctxt "post date"
 msgid "Posted on %s"
@@ -164,15 +172,7 @@ msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc\template-tags.php:57
-msgid "Please define default parameters in the form of an array."
-msgstr ""
-
-#: inc\template-tags.php:62
-msgid "Please define an SVG icon filename."
-msgstr ""
-
-#: inc\template-tags.php:142
+#: inc\template-tags.php:70
 msgctxt "taxonomy terms separator"
 msgid ", "
 msgstr ""

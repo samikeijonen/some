@@ -72,10 +72,10 @@ function some_setup() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 	
 	// Add support for logo.
-	add_theme_support( 'custom-logo', array(
+	add_theme_support( 'custom-logo', apply_filters( 'some_custom_logo_args', array(
 		'height' => 180,
 		'width'  => 180,
-	) );
+	) ) );
 	
 	/*
 	 * This theme styles the visual editor to resemble the theme style,
@@ -191,17 +191,17 @@ function some_scripts() {
 	
 	// Add parent theme styles if using child theme.
 	if ( is_child_theme() ) {
-		wp_enqueue_style( 'some-parent-style', trailingslashit( get_template_directory_uri() ) . 'style' . SOME_SUFFIX . '.css', array(), null );
+		wp_enqueue_style( 'some-parent-style', trailingslashit( get_template_directory_uri() ) . 'style' . SOME_SUFFIX . '.css', array(), some_theme_version( $stylesheet = 'parent' ) );
 	}
 	
 	// Add theme styles.
-	wp_enqueue_style( 'some-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'some-style', get_stylesheet_uri(), array(), some_theme_version() );
 	
 	// Add theme scripts.
-	wp_enqueue_script( 'some-navigation', get_template_directory_uri() . '/assets/js/navigation' . SOME_SUFFIX . '.js', array(), '20160405', true );
+	wp_enqueue_script( 'some-navigation', get_template_directory_uri() . '/assets/js/navigation' . SOME_SUFFIX . '.js', array(), '20163012', true );
 	
 	// Add svgxuse polyfill.
-	wp_enqueue_script( 'some-svgxuse', get_template_directory_uri() . '/assets/js/svgxuse' . SOME_SUFFIX . '.js', array(), '20160405', true );
+	wp_enqueue_script( 'some-svgxuse', get_template_directory_uri() . '/assets/js/svgxuse' . SOME_SUFFIX . '.js', array(), '20163012', true );
 	
 	// Add comments scripts.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -209,6 +209,23 @@ function some_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'some_scripts' );
+
+/**
+ * Get theme version number, works also for child themes.
+ *
+ * Calling function some_theme_version() automatically detect parent or child theme version number.
+ * Calling function with any parameter detect parent theme version number. For example some_theme_version( $stylesheet = 'parent' ).
+ *
+ * @since  1.1.0
+ *
+ * @param  string $stylesheet
+ * @return string $theme_version
+ */
+function some_theme_version( $stylesheet = '' ) {
+	$theme = ( empty( $stylesheet ) && is_child_theme() ) ? wp_get_theme( get_stylesheet() ) : wp_get_theme( get_template() );
+	
+	return $theme_version = $theme->get( 'Version' );
+}
 
 /**
  * Change [...] to just "Read more".
@@ -226,64 +243,6 @@ function some_excerpt_more() {
 
 }
 add_filter( 'excerpt_more', 'some_excerpt_more' );
-
-/**
- * Display SVG icons in social navigation.
- *
- * @since 1.0.0
- *
- * @param string  $item_output The menu item output.
- * @param WP_Post $item        Menu item object.
- * @param int     $depth       Depth of the menu.
- * @param array   $args        wp_nav_menu() arguments.
- * @return string Menu item with possible description.
- */
-function some_nav_social_icons( $item_output, $item, $depth, $args ) {
-	
-	// Supported social icons.
-	$social_icons = apply_filters( 'some_nav_social_icons', array(
-		'codepen.io'      => 'codepen',
-		'digg.com'        => 'digg',
-		'dribbble.com'    => 'dribbble',
-		'dropbox.com'     => 'dropbox',
-		'facebook.com'    => 'facebook',
-		'flickr.com'      => 'flickr',
-		'foursquare.com'  => 'foursquare',
-		'plus.google.com' => 'googleplus',
-		'github.com'      => 'github',
-		'instagram.com'   => 'instagram',
-		'linkedin.com'    => 'linkedin-alt',
-		'mailto:'         => 'mail',
-		'pinterest.com'   => 'pinterest-alt',
-		'getpocket.com'   => 'pocket',
-		'polldaddy.com'   => 'polldaddy',
-		'reddit.com'      => 'reddit',
-		'skype.com'       => 'skype',
-		'skype:'          => 'skype',
-		'soundcloud.com'  => 'cloud',
-		'spotify.com'     => 'spotify',
-		'stumbleupon.com' => 'stumbleupon',
-		'tumblr.com'      => 'tumblr',
-		'twitch.tv'       => 'twitch',
-		'twitter.com'     => 'twitter',
-		'vimeo.com'       => 'vimeo',
-		'wordpress.org'   => 'wordpress',
-		'wordpress.com'   => 'wordpress',
-		'youtube.com'     => 'youtube',
-	) );
-	
-	// Change SVG icon inside social links menu if there is supported URL.
-	if ( 'social' == $args->theme_location ) {
-		foreach ( $social_icons as $attr => $value ) {
-			if ( false !== strpos( $item_output, $attr ) ) {
-				$item_output = str_replace( $args->link_after, '</span>' . some_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
-			}
-		}
-	}
-
-	return $item_output;
-}
-add_filter( 'walker_nav_menu_start_el', 'some_nav_social_icons', 10, 4 );
 
 /**
  * Modifies tag cloud widget arguments to have all tags in the widget same font size.
@@ -361,3 +320,9 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * SVG icon functions.
+ */
+require get_template_directory() . '/inc/icon-functions.php';
+

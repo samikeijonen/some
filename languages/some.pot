@@ -1,4 +1,4 @@
-# Copyright (C) 2016 some
+# Copyright (C) 2017 some
 # This file is distributed under the same license as the some package.
 msgid ""
 msgstr ""
@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "X-Poedit-Basepath: ..\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -64,11 +64,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: entry-footer.php:25, template-parts\content-portfolio_project.php:41
+#: entry-footer.php:13, template-parts/content-portfolio_project.php:41
 msgid "Categories:"
 msgstr ""
 
-#: entry-footer.php:27, template-parts\content-portfolio_project.php:42
+#: entry-footer.php:14, template-parts/content-portfolio_project.php:42
 msgid "Tags:"
 msgstr ""
 
@@ -134,62 +134,62 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc\customizer.php:19
+#: inc/customizer.php:19
 msgid "Theme Settings"
 msgstr ""
 
-#: inc\customizer.php:28
+#: inc/customizer.php:28
 msgid "Front Page"
 msgstr ""
 
-#: inc\customizer.php:38, pages\front-page.php:101
+#: inc/customizer.php:38, pages/front-page.php:101
 msgid "Blog"
 msgstr ""
 
-#: inc\customizer.php:47
+#: inc/customizer.php:47
 msgid "Blog title"
 msgstr ""
 
-#: inc\customizer.php:67
+#: inc/customizer.php:67
 msgid "Blog text"
 msgstr ""
 
-#: inc\icon-functions.php:23
+#: inc/icon-functions.php:23
 msgid "Please define default parameters in the form of an array."
 msgstr ""
 
-#: inc\icon-functions.php:28
+#: inc/icon-functions.php:28
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: inc\template-tags.php:28
+#: inc/template-tags.php:28
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc\template-tags.php:33
+#: inc/template-tags.php:33
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc\template-tags.php:70
+#: inc/template-tags.php:70
 msgctxt "taxonomy terms separator"
 msgid ", "
 msgstr ""
 
-#: menus\menu-primary.php:21
+#: menus/menu-primary.php:11
 msgid "Primary Menu"
 msgstr ""
 
-#: menus\menu-primary.php:23
+#: menus/menu-primary.php:12
 msgid "Menu"
 msgstr ""
 
-#: menus\menu-social.php:21
+#: menus/menu-social.php:11
 msgid "Social Menu"
 msgstr ""
 
-#: pages\front-page.php:102
+#: pages/front-page.php:102
 msgid "Read blog posts"
 msgstr ""
 
@@ -230,26 +230,26 @@ msgctxt "dots after previous post link"
 msgid "&hellip;"
 msgstr ""
 
-#: template-parts\content-none.php:14
+#: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
 
-#: template-parts\content-none.php:21
+#: template-parts/content-none.php:21
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts\content-none.php:25
+#: template-parts/content-none.php:25
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: template-parts\content-none.php:31
+#: template-parts/content-none.php:31
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts\content-page.php:23, template-parts\content-portfolio_project.php:29, template-parts\content.php:28
+#: template-parts/content-page.php:23, template-parts/content-portfolio_project.php:29, template-parts/content.php:28
 msgid "Pages:"
 msgstr ""
 
-#: template-parts\content-page.php:27, template-parts\content-portfolio_project.php:33, template-parts\content.php:32
+#: template-parts/content-page.php:27, template-parts/content-portfolio_project.php:33, template-parts/content.php:32
 msgid "Page"
 msgstr ""

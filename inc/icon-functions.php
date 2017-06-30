@@ -166,6 +166,7 @@ function some_social_links_icons() {
 		'twitch.tv'       => 'twitch',
 		'twitter.com'     => 'twitter',
 		'vimeo.com'       => 'vimeo',
+		'weibo.com'       => 'weibo',
 		'wordpress.org'   => 'wordpress',
 		'wordpress.com'   => 'wordpress',
 		'youtube.com'     => 'youtube',

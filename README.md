@@ -19,9 +19,13 @@ Note that icons (only some of the icons) are turned into SVG images using tool c
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-&copy; 2016 [Sami Keijonen](https://foxland.fi/).
+&copy; 2016-2017 [Sami Keijonen](https://foxland.fi/).
 
 ## Changelog
+
+### Version 1.1.1- June 30, 2017
+
+* Add weibo.com social icon.
 
 ### Version 1.1.0 - December 31, 2016
 

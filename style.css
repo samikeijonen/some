@@ -4,7 +4,7 @@ Theme URI: https://foxland.fi/downloads/some/
 Author: Sami Keijonen
 Author URI: https://foxland.fi/
 Description: Some is simple blogging theme with SVG social menu.
-Version: 1.1.0
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: some
@@ -355,7 +355,7 @@ h6 {
 }
 
 @media screen and (min-width: 62.875em) {
-	
+
 	body,
 	button,
 	input,
@@ -364,7 +364,7 @@ h6 {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
-	
+
 	h1 {
 		font-size: 36px;
 		font-size: 2.25rem;
@@ -381,11 +381,11 @@ h6 {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
-	
+
 	.front-page-content .entry-content {
 		font-size: 1.5em;
 	}
-	
+
 }
 
 p,
@@ -806,7 +806,7 @@ a.more-link {
 	padding: 0 8px !important;
 	margin: 0 2px 6px 0;
 	text-decoration: none;
-	text-transform: capitalize;	
+	text-transform: capitalize;
 }
 
 a:hover,
@@ -919,7 +919,7 @@ a:active {
 }
 
 @media screen and (min-width: 62.875em) {
-	
+
 	.menu-toggle {
 		display: none;
 	}
@@ -934,7 +934,7 @@ a:active {
 		padding-top: 0.84375em;
 		margin: 0;
 	}
-	
+
 	.main-navigation li {
 		padding-left: 0;
 		padding-right: 0;
@@ -944,7 +944,7 @@ a:active {
 	.main-navigation .primary-menu > li {
 		border: 0;
 	}
-	
+
 	.main-navigation a,
 	.main-navigation .primary-menu > li {
 		display: inline-block;
@@ -1021,7 +1021,7 @@ a:active {
 	.main-navigation ul ul .menu-item-has-children > a {
 		padding-right: 2.0625em;
 	}
-	
+
 }
 
 /* Social Links. */
@@ -1063,7 +1063,7 @@ a:active {
 }
 
 @media screen and (min-width: 62.875em) {
-	
+
 	.menu-social a {
 		width: 5em;
 		height: 5em;
@@ -1074,7 +1074,7 @@ a:active {
 		top: 1em;
 		left: 1em
 	}
-	
+
 }
 
 .site-main .comment-navigation,
@@ -1100,7 +1100,7 @@ a:active {
 }
 
 @media screen and (min-width: 56em) {
-	
+
 	.comment-navigation .nav-previous,
 	.posts-navigation .nav-previous,
 	.post-navigation .nav-previous {
@@ -1115,7 +1115,7 @@ a:active {
 		text-align: right;
 		width: 50%;
 	}
-	
+
 	.comment-navigation .nav-previous + .nav-next,
 	.posts-navigation  .nav-previous + .nav-next,
 	.post-navigation .nav-previous + .nav-next {
@@ -1123,7 +1123,7 @@ a:active {
 		padding-top: 0;
 		margin-top: 0;
 	}
-	
+
 }
 
 
@@ -1313,14 +1313,12 @@ a:active {
 	padding-top: 6%;
 	padding-bottom: 6%;
 	margin-bottom: 3em;
-	-webkit-transform: skew(0deg, -3deg);
-	    -ms-transform: skew(0deg, -3deg);
-	        transform: skew(0deg, -3deg);
+	-ms-transform: skew(0deg, -3deg);
+	    transform: skew(0deg, -3deg);
 }
 .site-branding > .wrapper {
-	-webkit-transform: skew(0deg, 3deg);
-	    -ms-transform: skew(0deg, 3deg);
-	        transform: skew(0deg, 3deg);
+	-ms-transform: skew(0deg, 3deg);
+	    transform: skew(0deg, 3deg);
 }
 .custom-header-image  .site-branding {
 	border-bottom: none;
@@ -1333,19 +1331,17 @@ a:active {
 }
 
 .grid-wrapper {
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .grid-wrapper > * {
 	width: 100%;
 }
 
 @media screen and (min-width: 56em) {
-	
+
 	.grid-wrapper > .hentry,
 	.error404 .page-content > .grid-wrapper > * {
 		border-right: 1px solid #484653;
@@ -1378,7 +1374,7 @@ a:active {
 	.error404 .page-content {
 		margin-bottom: 3.4em;
 	}
-	
+
 	.site-title-description,
 	.menu-social {
 		width: 50%;
@@ -1389,7 +1385,7 @@ a:active {
 	.menu-social {
 		padding-top: 0;
 	}
-	
+
 	/* Widgets. */
 	.footer-widgets-wrapper {
 		padding-top: 0;
@@ -1397,7 +1393,7 @@ a:active {
 	.footer-widgets-wrapper .widget-area {
 		padding-top: 3.4em;
 	}
-	
+
 	.footer-widgets-2 .widget-area {
 		width: 50%;
 	}
@@ -1421,9 +1417,9 @@ a:active {
 	.footer-widgets-3 .footer-area-2 {
 		border-right: 1px solid #484653;
 	}
-	
+
 }
-	
+
 .site-footer {
 	border-top: 1px solid #484653;
 	font-size: 0.8125em;

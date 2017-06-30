@@ -23,9 +23,10 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
-### Version 1.1.1- June 30, 2017
+### Version 1.1.1 - June 30, 2017
 
 * Add weibo.com social icon.
+* Fix missing `</symbol>` in `svg-icons.svg` file.
 
 ### Version 1.1.0 - December 31, 2016
 
